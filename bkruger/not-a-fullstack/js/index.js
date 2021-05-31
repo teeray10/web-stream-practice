@@ -11,7 +11,7 @@ customElements.define('index-element', class Index extends HTMLElement {
         let addBtn = document.createElement('input');
         addBtn.setAttribute('type', 'submit');
         addBtn.setAttribute('value', 'add');
-        addBtn.setAttribute('onclick', 'openDB()');
+        addBtn.setAttribute('onclick', 'writeToDB()');
 
         let style = document.createElement('link');
         style.setAttribute('href', '../css/index.css');
