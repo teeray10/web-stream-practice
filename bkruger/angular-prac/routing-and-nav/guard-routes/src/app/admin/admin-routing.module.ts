@@ -5,11 +5,13 @@ import { AdminComponent } from './admin.component';
 import { BlogAdminComponent } from './blog/blog-admin.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { InvestAdminComponent } from './invest/invest-admin.component';
+import { AuthGuard } from '../auth/auth.guard';
 
 const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
+    canActivate: [AuthGuard],
     children: [
       {
         path: '',
