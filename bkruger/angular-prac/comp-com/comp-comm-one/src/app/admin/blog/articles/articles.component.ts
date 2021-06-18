@@ -9,9 +9,6 @@ import { ArticleServiceService } from '../article-service.service';
 })
 export class ArticlesComponent implements OnInit {
 
-  // title!: string;
-  // title!: string = "John";
-  // content!: string;
   articles!: Article[];
 
   constructor(
@@ -22,13 +19,8 @@ export class ArticlesComponent implements OnInit {
     this.articles = this.articleService.getArticles();
   }
 
-  // receiveNewArticleTitle(title: string){
-  //   this.title = title;
-  // }
-
-  // receiveNewArticleContent(content: string){
-  //   this.content = content;
-  //   this.articles.push({ title: this.title, content: this.content });
-  // }
+  receiveNewArticle(article: Article){
+    this.articles.push(article);
+  }
 
 }
