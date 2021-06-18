@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let article of articles">
+        <app-article [article]="article"></app-article>
+    </li>
+</ul>
+<!-- <app-article-compose (contentContentEvent)="receiveNewArticleContent($event)"></app-article-compose> -->
