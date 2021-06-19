@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { Article } from './article';
 
 const articles: Article[] = [
-  { title: 'Title 1', content: 'Content 1' },
-  { title: 'Title 2', content: 'Content 2' },
+  { id: 1, title: 'Title 1', content: 'Content 1' },
+  { id: 2, title: 'Title 2', content: 'Content 2' },
 ]
 
 @Injectable({

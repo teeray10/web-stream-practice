@@ -1,6 +1,16 @@
-<ul>
-    <li *ngFor="let article of articles">
+<div [style.font-size.px]="currentSize">
+    <div *ngFor="let article of articles">
         <app-article [article]="article"></app-article>
-    </li>
-</ul>
+        <button (click)="setArticleToEdit(article)">Edit</button>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
 <app-article-compose (articleEvent)="receiveNewArticle($event)"></app-article-compose>
+<div *ngIf="editArticle">
+   <app-article-edit [(article)]="editArticle"></app-article-edit> 
+</div>
+

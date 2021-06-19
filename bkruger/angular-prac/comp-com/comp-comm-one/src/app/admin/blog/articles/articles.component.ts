@@ -9,7 +9,9 @@ import { ArticleServiceService } from '../article-service.service';
 })
 export class ArticlesComponent implements OnInit {
 
+  editArticle?: Article;
   articles!: Article[];
+  currentSize: number = 16;
 
   constructor(
     private articleService: ArticleServiceService
@@ -21,6 +23,10 @@ export class ArticlesComponent implements OnInit {
 
   receiveNewArticle(article: Article){
     this.articles.push(article);
+  }
+
+  setArticleToEdit(article: Article){
+    this.editArticle = article;
   }
 
 }

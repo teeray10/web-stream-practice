@@ -5,6 +5,8 @@ import { ArticleComponent } from './blog/article/article.component';
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
 import { ArticleComposeComponent } from './blog/article-compose/article-compose.component';
+import { SizerComponent } from './blog/sizer/sizer.component';
+import { ArticleEditComponent } from './blog/article-edit/article-edit.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +14,8 @@ import { ArticleComposeComponent } from './blog/article-compose/article-compose.
     ArticleComponent,
     AdminComponent,
     ArticleComposeComponent,
+    SizerComponent,
+    ArticleEditComponent,
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,6 @@
+<div>
+    <label>{{ article.id }}</label>
+    <input #title type="text" [value]="article.title"/>
+    <input #content type="text" [value]="article.content"/>
+    <button (click)="updateArticle(title.value, content.value)">Update</button>
+</div>

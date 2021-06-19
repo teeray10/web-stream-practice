@@ -1,5 +1,6 @@
 import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { Article } from '../article';
+import { ArticleServiceService } from '../article-service.service';
 
 @Component({
   selector: 'app-article-compose',
@@ -12,7 +13,9 @@ export class ArticleComposeComponent implements OnInit {
   // @ViewChild('content', { static: true }) content?: ElementRef;
   @Output() articleEvent = new EventEmitter<Article>();
 
-  constructor() { }
+  constructor(
+    private articleService: ArticleServiceService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -23,7 +26,8 @@ export class ArticleComposeComponent implements OnInit {
   // }
   
   newArticle(newTitle: string, newContent: string){
-    this.articleEvent.emit({ title: newTitle, content: newContent })
+    const articleId = this.articleService.getArticles().length + 1;
+    this.articleEvent.emit({ id: articleId, title: newTitle, content: newContent })
   }
   
 }
