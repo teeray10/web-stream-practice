@@ -1,0 +1,13 @@
+.nav-container {
+    background-color: darkslategray;
+    display: flex;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: rgb(255, 244, 223);
+    padding-right: 15px;
+}

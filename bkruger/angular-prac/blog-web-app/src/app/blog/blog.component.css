@@ -1,0 +1,9 @@
+.article-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.article-metadata-container {
+    display: flex;
+    flex-direction: row;
+}

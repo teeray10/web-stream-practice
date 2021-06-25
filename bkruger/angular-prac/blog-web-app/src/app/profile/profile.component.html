@@ -1,0 +1,6 @@
+<div *ngIf="username">
+    <p>{{ username }}</p>
+</div>
+<a *ngIf="!username" routerLink="/auth">
+    Login
+</a>

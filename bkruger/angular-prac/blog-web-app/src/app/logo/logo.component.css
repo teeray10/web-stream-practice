@@ -1,0 +1,13 @@
+.logo-container {
+    background-color: darkslategrey;
+    height: 100%;
+}
+
+.logo-img {
+    height:55px;
+    width: auto;
+    float: right;
+    margin-right: 45%;
+    margin-top: 5px;
+}
+

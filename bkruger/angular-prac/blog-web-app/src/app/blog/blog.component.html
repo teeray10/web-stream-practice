@@ -1,0 +1,20 @@
+<div class="article-container">
+    <h2>{{ article.title }}</h2>
+    <div class="article-metadata-container">
+        <h4>
+            {{ article.author }}
+        </h4>
+        <h4>
+            {{ article.date }}
+        </h4>
+        <h4>
+            {{ article.level }}
+        </h4>
+    </div>
+    <div *ngFor="let tldr of article.tldrs">
+        <p>{{ tldr }}</p>
+    </div>
+    <p>
+        {{ article.content }}
+    </p>
+</div>

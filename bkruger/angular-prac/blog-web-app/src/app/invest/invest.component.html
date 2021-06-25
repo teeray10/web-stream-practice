@@ -1,0 +1,19 @@
+    <form [formGroup]="investmentForm" class="input-container" (ngSubmit)="onSubmit()">
+        <h1>Invest, Take No Risk</h1>
+        <mat-form-field appearance="fill">
+            <mat-label>Amount to protect</mat-label>
+            <input matInput placeholder="1000" type="text" id="amount-to-protect" formControlName="amountToProtect">
+            <mat-hint>Your investment amount</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Profit before sell</mat-label>
+            <input matInput placeholder="50" type="text" id="profit-before-sell" formControlName="profitBeforeSell">
+            <mat-hint>Profit before you're allowed to sell</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Risk taker's profit</mat-label>
+            <input matInput placeholder="15" type="text" id="percent-profit" formControlName="percentProfit">
+            <mat-hint>Amount risk taker wants of your profit</mat-hint>
+        </mat-form-field>
+        <button id="submitBtn" mat-raised-button color="primary">Invest</button>
+    </form>
