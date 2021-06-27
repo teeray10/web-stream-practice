@@ -2,3 +2,16 @@
     <button (click)="do()">Do</button>
 </div>
 <p>{{ article$ | async | json }}</p>
+
+<form #newArticleForm="ngForm" (ngSubmit)="onSubmit(newArticleForm)">
+    <input name="title" placeholder="title" type="text" [(ngModel)]="title"/><br>
+    {{ title }} <br>
+    <input name="content" placeholder="content" type="text" [(ngModel)]="content"/><br>
+    {{ content }} <br>
+    <input name="author" placeholder="author" type="text" [(ngModel)]="author"/><br>
+    {{ author }}
+    <br><br>
+    <button type="submit">Submit</button>
+    
+    {{ form | json }}
+</form>

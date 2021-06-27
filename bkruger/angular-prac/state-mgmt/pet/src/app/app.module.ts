@@ -23,6 +23,7 @@ import { darkThemeFeatureKey, darkThemeReducer } from './store/reducers/dark-the
 import { NewArticleEffects } from './store/effects/new-article/new-article.effects';
 import { newArticleFeatureKey, newArticleReducer } from './store/reducers/new-article/new-article.reducer';
 import { MyTestComponent } from './comps/admin/blog/test/my-test/my-test.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { MyTestComponent } from './comps/admin/blog/test/my-test/my-test.compone
     StoreModule.forFeature(darkThemeFeatureKey, darkThemeReducer),
     EffectsModule.forFeature([DarkthemeEffects, NewArticleEffects]),
     BrowserAnimationsModule,
-    StoreModule.forFeature(newArticleFeatureKey, newArticleReducer)
+    StoreModule.forFeature(newArticleFeatureKey, newArticleReducer),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
