@@ -1,0 +1,23 @@
+.container {
+    min-width: 100%;
+    width: 100%;
+}
+
+.main {
+    width: 100%;
+    min-width: 100%;
+}
+
+:host {
+    width: 90%;
+    // min-width: 100%;
+}
+
+mat-tab-group {
+    background-color: var(--secondary-color);
+    
+}
+
+mat-tab {
+    color: var(--text-color);
+}

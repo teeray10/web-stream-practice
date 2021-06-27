@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Panorama Leaderboard</title>
+    <script type="module" src="./js/dummyData.js"></script>
+    <script type="module" src="./js/custom-elements/leaderboard-table/leaderboard-table.js"></script>
+    <script type="module" src="./js/custom-elements/recent-results/recent-results-table.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Leagues</a></li>
+            <li><a href="#">Fixtures</a></li>
+            <li><a href="#">Results</a></li>
+            <li><a href="#">Teams</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="header">
+            <h1>Wednesday League</h1>
+        </div>
+        <div class="main">
+            <h3>Current Standings</h3>
+            <leaderboard-table></leaderboard-table>
+        </div>
+        <div class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Fixtures</a></li>
+                    <li><a href="#">Results</a></li>
+                    <li><a href="#">Teams</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="recent-results">
+            <h3>Recent Results</h3>
+            <recent-results-table></recent-results-table>
+        </div>
+        <!-- <div class="recent-results">
+                <h3>Recent Results</h3>
+                <recent-results-table></recent-results-table>
+            </div> -->
+    </div>
+</body>
+
+</html>

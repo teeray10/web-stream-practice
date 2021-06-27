@@ -1,0 +1,10 @@
+leaderboard = {
+    "Position",
+    "Team",
+    "Played",
+    "Won",
+    "Drawn",
+    "Lost",
+    "GD",
+    "Points"
+}

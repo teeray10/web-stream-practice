@@ -1,0 +1,23 @@
+@import "../../app.component.scss";
+
+h3 {
+	padding: 1em 0;
+	color: black;
+}
+
+h1 {
+	font-size: 32px;
+}
+
+.container {
+	background-color: var(--container-primary-color);
+	width: 100%
+}
+
+.header {
+	width: 90%;
+}
+
+.main {
+	padding: 0px 2em;
+}

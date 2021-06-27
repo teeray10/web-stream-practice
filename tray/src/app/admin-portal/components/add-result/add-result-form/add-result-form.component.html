@@ -1,0 +1,45 @@
+<form [formGroup]="addResultFormGroup" (ngSubmit)="submit()">
+	<div class="top">
+		<mat-form-field>
+			<mat-label>Choose a date</mat-label>
+			<input formControlName="date" matInput [matDatepicker]="picker" required />
+			<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+			<mat-datepicker #picker></mat-datepicker>
+		</mat-form-field>
+		<mat-form-field>
+			<mat-label for="time">Choose a time</mat-label>
+			<mat-select formControlName="time" id="time" required>
+				<mat-option value="18:15">18:15</mat-option>
+				<mat-option value="19:00">19:00</mat-option>
+			</mat-select>
+		</mat-form-field>
+	</div>
+	<div class="left">
+		<mat-form-field>
+			<mat-label for="team1">Team 1</mat-label>
+			<input formControlName="team1" matInput type="text" id="team1" required />
+		</mat-form-field>
+		<mat-form-field>
+			<mat-label for="team1Goals">Goals</mat-label>
+			<input formControlName="team1Goals" matInput type="number" id="team1Goals" required />
+		</mat-form-field>
+	</div>
+	<div class="middle">
+		<h1>VS</h1>
+	</div>
+	<div class="right">
+		<mat-form-field>
+			<mat-label for="team2">Team 2</mat-label>
+			<input formControlName="team2" matInput type="text" id="team2" required />
+		</mat-form-field>
+		<mat-form-field>
+			<mat-label for="team2Goals">Goals</mat-label>
+			<input formControlName="team2Goals" matInput type="number" id="team2Goals" required />
+		</mat-form-field>
+	</div>
+	<div class="bottom">
+		<button mat-raised-button type="submit" [disabled]="addResultFormGroup.invalid">
+			SUBMIT
+		</button>
+	</div>
+</form>

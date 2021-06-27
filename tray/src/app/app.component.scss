@@ -1,0 +1,52 @@
+:host(.light) {
+    --container-primary-color: #1a237e;
+    --text-color: #000;
+    --secondary-color: whitesmoke;
+    --ff: Roboto, "Helvetica Neue", sans-serif;
+}
+
+:host(.dark) {
+    --container-primary-color: #312f2f;
+    --text-color: #fff;
+    --secondary-color: #827d7d;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 1em;
+}
+
+.container {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background-color: var(--container-primary-color);
+  color: var(--text-color);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+.header {
+  grid-area: header;
+  color: white;
+}
+
+.main {
+  grid-area: main;
+  width: 90%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 5px 5px 0 0;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}

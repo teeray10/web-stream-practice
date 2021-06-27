@@ -1,0 +1,40 @@
+<!-- <div class="container">
+    <div class="header">
+        <h1>{{league}} League</h1>
+    </div>
+    <div class="main">
+        <mat-tab-group>
+            <mat-tab label="Standings">
+                <ng-template matTabContent>
+                    <app-standings-tab></app-standings-tab>
+                </ng-template>
+            </mat-tab>
+            <mat-tab label="Fixtures">
+                <ng-template matTabContent>
+                    <app-fixtures-tab></app-fixtures-tab>
+                </ng-template>
+            </mat-tab>
+            <mat-tab label="Results">
+                <ng-template matTabContent>
+                    <app-results-tab></app-results-tab>
+                </ng-template>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="header">
+        <h1>{{league}} League</h1>
+    </div>
+    <div class="main">
+        <nav mat-tab-nav-bar>
+            <a mat-tab-link *ngFor="let tab of tabs" [routerLink]="tab.route">
+                {{tab.label}}
+            </a>
+        </nav>
+    </div>
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+</div>

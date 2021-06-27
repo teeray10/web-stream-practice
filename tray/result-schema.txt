@@ -1,0 +1,8 @@
+result = {
+    "date",
+    "time",
+    "team1Name",
+    "team1Goals",
+    "team2Goals"
+    "team2Name",
+}

@@ -1,0 +1,13 @@
+<div class="container">
+	<div class="header">
+		<h1>Admin Portal</h1>
+	</div>
+	<div class="main">
+		<h1>Select League</h1>
+		<div *ngFor="let selectedLeague of leagues">
+			<a mat-raised-button [routerLink]="['/admin/league', selectedLeague]">
+				{{ selectedLeague | uppercase }}
+			</a>
+		</div>
+	</div>
+</div>

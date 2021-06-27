@@ -1,0 +1,12 @@
+@import "../../app.component.scss";
+
+table {
+  width: 100%;
+  background-color: var(--secondary-color);
+  
+  // margin: 20px 0 20px 2.5%;
+}
+
+table * {
+  color: var(--text-color)
+}
