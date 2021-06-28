@@ -1,24 +1,29 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 
-import { concatMap, map, mergeMap } from 'rxjs/operators';
-import { Observable, EMPTY } from 'rxjs';
+import { map, mergeMap } from 'rxjs/operators';
 
 import * as NewArticleActions from '../../actions/new-article/new-article.actions';
-import { getNewArticle } from '../../selectors/new-article/new-article.selectors';
+import { ArticleServiceService } from 'src/app/services/blog/article/article-service.service';
 
 @Injectable()
 export class NewArticleEffects {
 
-  loadNewArticles$ = createEffect(() => {
-    return this.actions$.pipe( 
+  // saveArticle = createEffect(() => 
+  //   this.actions$.pipe(
+  //     ofType(NewArticleActions.newArticle),
+  //     mergeMap((action) => {
+  //       this.articleService.saveNewArticle(action.article).pipe(
+  //         map( () => {
+  //           return NewArticleActions.newArticleSuccess()
+  //         }),
+  //       )
+  //     })
+  //   )
+  // )
 
-      ofType(NewArticleActions.newArticle),
-      /** An EMPTY observable only emits completion. Replace with your own observable API request */
-      concatMap(() => EMPTY as Observable<{ type: string }>)
-    );
-  });
-
-  constructor(private actions$: Actions) {}
+  constructor(
+    private actions$: Actions,
+    private articleService: ArticleServiceService) {}
 
 }

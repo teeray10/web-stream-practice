@@ -32,8 +32,9 @@ export const initialState: NewArticleState = {
 export const newArticleReducer = createReducer(
   initialState,
   on(NewArticleActions.newArticle, 
-    (state, { article }) => {
-      return { ...state, title: article.title }
+    (article) => {
+      return { ...article, title: article.title, content: article.content }
     }),
+  on(NewArticleActions.newArticleSuccess, (state) => ({ ...state }))
 );
 

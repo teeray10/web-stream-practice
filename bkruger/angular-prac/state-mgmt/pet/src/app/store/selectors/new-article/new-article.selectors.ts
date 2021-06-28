@@ -9,13 +9,3 @@ export const getNewArticle = createSelector(
   getNewArticleState,
   state => state
 );
-
-export const getTldr = createSelector(
-  getNewArticle,
-  state => state.tldr
-);
-
-export const getContent = createSelector(
-  getNewArticle,
-  state => state.content
-);

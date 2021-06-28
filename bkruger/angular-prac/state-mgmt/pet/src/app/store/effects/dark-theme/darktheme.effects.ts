@@ -10,16 +10,6 @@ import * as DarkthemeActions from '../../actions/dark-theme/darktheme.actions';
 @Injectable()
 export class DarkthemeEffects {
 
-
-  // loadDarkthemes$ = createEffect(() => {
-  //   return this.actions$.pipe( 
-
-  //     ofType(DarkthemeActions.toggleDarkTheme),
-  //     /** An EMPTY observable only emits completion. Replace with your own observable API request */
-  //     concatMap(() => EMPTY as Observable<{ type: string }>)
-  //   );
-  // });
-
   constructor(private actions$: Actions) {}
 
 }

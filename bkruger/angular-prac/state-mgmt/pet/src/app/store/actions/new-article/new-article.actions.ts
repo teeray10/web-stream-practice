@@ -6,6 +6,10 @@ export const newArticle = createAction(
   props<{ article: Article }>()
 );
 
+export const newArticleSuccess = createAction(
+  '[New Article] New Article Success'
+);
+
 
 
 
