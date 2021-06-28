@@ -1,0 +1,17 @@
+<p>investment-create works!</p>
+<form #investmentForm="ngForm" (ngSubmit)="submitInvestment()">
+    <label for="investmentAmount">Investment Amount:</label>
+    <input  type="text" id="investmentAmount" 
+            name="investmentAmount" [(ngModel)]="investmentForm.investmentAmount"/>
+
+    <label for="profitBeforSellAllow">Profit Before Allowed to Sell:</label>
+    <input  type="text" id="profitBeforSellAllow" 
+            name="profitBeforSellAllow" [(ngModel)]="investmentForm.profitBeforSellAllow"/>
+            
+    <label for="riskTakerProfit">Risk Taker's Profit</label>
+    <input  type="text" id="riskTakerProfit" 
+            name="riskTakerProfit" [(ngModel)]="investmentForm.riskTakerProfit"/>
+    <button type="submit">Submit</button>
+</form>
+
+{{ investment$ | async }}
