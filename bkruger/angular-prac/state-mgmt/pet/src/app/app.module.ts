@@ -13,7 +13,7 @@ import { AdminHomeComponent } from './comps/admin/admin-home/admin-home.componen
 import { InvestmentsComponent } from './comps/app/invest/investments/investments/investments.component';
 import { AdminRoutingModule } from './comps/admin/admin-routing.module';
 import { ApplicationRoutingModule } from './comps/app/application-routing.module';
-import { StoreModule } from '@ngrx/store';
+import { ActionReducer, StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { ApplicationHomeComponent } from './comps/app/application-home/application-home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -24,6 +24,14 @@ import { NewArticleEffects } from './store/effects/new-article/new-article.effec
 import { newArticleFeatureKey, newArticleReducer } from './store/reducers/new-article/new-article.reducer';
 import { MyTestComponent } from './comps/admin/blog/test/my-test/my-test.component';
 import { FormsModule } from '@angular/forms';
+
+export function debug(reducer: ActionReducer<any>): ActionReducer<any> {
+  return (state, action) => {
+    console.log("action", action);
+    console.log("state after reducer", reducer(state, action));
+    return reducer(state, action);
+  };
+}
 
 @NgModule({
   declarations: [
@@ -45,7 +53,7 @@ import { FormsModule } from '@angular/forms';
     ApplicationRoutingModule,
     AdminRoutingModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot({}, { metaReducers: [ debug ] }),
     EffectsModule.forRoot([]),
     StoreModule.forFeature(darkThemeFeatureKey, darkThemeReducer),
     EffectsModule.forFeature([DarkthemeEffects, NewArticleEffects]),
