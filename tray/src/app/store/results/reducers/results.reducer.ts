@@ -4,7 +4,7 @@ import * as ResultsActions from "../actions/results.actions";
 
 export const resultsFeatureKey = "results";
 
-const localStorageState = JSON.parse(localStorage.getItem("state") || "");
+// const localStorageState = JSON.parse(localStorage.getItem("state") || "");
 
 export interface ResultsState {
   results: Result[],
@@ -14,7 +14,7 @@ export interface ResultsState {
 
 export const initialState: ResultsState = {
   results: [],
-  darkTheme: localStorageState.darkTheme,
+  darkTheme: false,
   isLoading: false
 }
 

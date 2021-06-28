@@ -38,7 +38,7 @@ export class CurrentStandingsTableComponent implements OnInit {
   }
 
   private getStandings() {
-    this.standingsStore.dispatch(getStandings());
+    // this.standingsStore.dispatch(getStandings());
     this.standingsStore.pipe(select(selectorGetStandings))
       .subscribe(teams => this.dataSource = teams);
   }

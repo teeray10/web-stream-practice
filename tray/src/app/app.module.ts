@@ -39,7 +39,7 @@ export function debug(reducer: ActionReducer<any>): ActionReducer<any> {
     StoreModule.forRoot({}, {metaReducers: [debug]}),
     EffectsModule.forRoot([]),
     StoreModule.forFeature(fromResults.resultsFeatureKey, fromResults.reducer),
-    EffectsModule.forFeature([ResultsEffects, StandingsEffects, ThemeEffects, ThemeEffects]),
+    EffectsModule.forFeature([ResultsEffects, StandingsEffects, ThemeEffects]),
     StoreModule.forFeature(fromStandings.standingsFeatureKey, fromStandings.reducer),
     StoreModule.forFeature(fromTheme.themeFeatureKey, fromTheme.reducer),
   ],
