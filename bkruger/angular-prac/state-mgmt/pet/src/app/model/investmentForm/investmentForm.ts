@@ -1,5 +1,9 @@
-export interface InvestmentForm{
-    investmentAmount: number,
-    profitBeforeSellPermit: number,
-    riskTakerProfit: number
-}
+export class InvestmentForm {
+
+    constructor(
+        public investmentAmount: number,
+        public profitBeforeSellPermit: number,
+        public riskTakerProfit: number
+    ) {  }
+  
+  }

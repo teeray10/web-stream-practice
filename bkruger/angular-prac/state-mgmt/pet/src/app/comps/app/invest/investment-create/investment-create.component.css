@@ -1,0 +1,11 @@
+.ng-touched:not(form) {
+    background-color: lightblue;
+}
+
+.ng-dirty:not(form) {
+    border: 2px solid orange;
+}
+
+.ng-invalid:not(form) {
+    background-color: crimson;
+}

@@ -24,6 +24,7 @@ import { NewArticleEffects } from './store/effects/new-article/new-article.effec
 import { newArticleFeatureKey, newArticleReducer } from './store/reducers/new-article/new-article.reducer';
 import { MyTestComponent } from './comps/admin/blog/test/my-test/my-test.component';
 import { FormsModule } from '@angular/forms';
+import { InvestmentCreateComponent } from './comps/app/invest/investment-create/investment-create.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { FormsModule } from '@angular/forms';
     RiskTakesComponent,
     RiskTakeComponent,
     ArticleEditComponent,
-    MyTestComponent
+    MyTestComponent,
+    InvestmentCreateComponent
   ],
   imports: [
     BrowserModule,

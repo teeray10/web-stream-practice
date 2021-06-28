@@ -1,0 +1,30 @@
+<br>
+{{ investmentForm | json }}
+<br>
+<br>
+<div>
+    <form #form="ngForm" (ngSubmit)="onSubmit()" >
+        <label for="investmentAmt">Investment Amount:</label>
+        <input type="text" [(ngModel)]="investmentForm.investmentAmount" 
+                name="investmentAmount" id="investmentAmt" 
+                required #investmentAmount="ngModel"/>
+        <div [hidden]="investmentAmount.valid || investmentAmount.pristine">
+            Investment amount is invalid
+        </div>
+        <br>
+
+        <label for="profitB4Sell">Profit Before Allowed to Sell:</label>
+        <input type="text" [(ngModel)]="investmentForm.profitBeforeSellPermit" 
+                name="profitBeforeSellPermit" id="profitB4Sell"/><br>
+
+        <label for="riskTakerProfit">Profit for Risk Taker:</label>
+        <input type="text" [(ngModel)]="investmentForm.riskTakerProfit" 
+                name="riskTakerProfit" id="riskTakerProfit"/><br>
+
+        <button type="submit">Create Invesment</button>
+    </form>
+</div>
+
+<!-- investmentAmount: number,
+    profitBeforeSellPermit: number,
+    riskTakerProfit: number -->

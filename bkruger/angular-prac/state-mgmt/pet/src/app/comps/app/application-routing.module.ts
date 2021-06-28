@@ -8,6 +8,7 @@ import { InvestmentsComponent } from './invest/investments/investments/investmen
 import { RiskTakeComponent } from './invest/risk-take/risk-take/risk-take.component';
 import { RiskTakesComponent } from './invest/risk-takes/risk-takes/risk-takes.component';
 import { ApplicationHomeComponent } from './application-home/application-home.component';
+import { InvestmentCreateComponent } from './invest/investment-create/investment-create.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,7 @@ const routes: Routes = [
           { path: 'investments', component: InvestmentsComponent },
           { path: 'risk-take/:id', component: RiskTakeComponent },
           { path: 'risk-takes', component: RiskTakesComponent },
+          { path: 'investment-create', component: InvestmentCreateComponent },
         ]
       }
     ]
