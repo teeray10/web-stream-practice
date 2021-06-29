@@ -17,7 +17,6 @@ import { ActionReducer, StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { ApplicationHomeComponent } from './comps/app/application-home/application-home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ArticleEditComponent } from './comps/admin/blog/article-edit/article-edit.component';
 import { DarkthemeEffects } from './store/effects/dark-theme/darktheme.effects';
 import { darkThemeFeatureKey, darkThemeReducer } from './store/reducers/dark-theme/darktheme.reducer';
 import { NewArticleEffects } from './store/effects/new-article/new-article.effects';
@@ -45,7 +44,6 @@ export function debug(reducer: ActionReducer<any>): ActionReducer<any> {
     InvestmentComponent,
     RiskTakesComponent,
     RiskTakeComponent,
-    ArticleEditComponent,
     ArticleCreateNewComponent,
   ],
   imports: [

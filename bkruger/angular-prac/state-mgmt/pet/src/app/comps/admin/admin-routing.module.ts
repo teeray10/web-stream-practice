@@ -8,7 +8,6 @@ import { InvestmentComponent } from '../app/invest/investment/investment/investm
 import { InvestmentsComponent } from '../app/invest/investments/investments/investments.component';
 import { RiskTakeComponent } from '../app/invest/risk-take/risk-take/risk-take.component';
 import { RiskTakesComponent } from '../app/invest/risk-takes/risk-takes/risk-takes.component';
-import { ArticleEditComponent } from './blog/article-edit/article-edit.component';
 import { ArticleCreateNewComponent } from './blog/article-create-new/article-create-new/article-create-new.component';
 
 const routes: Routes = [
@@ -19,7 +18,7 @@ const routes: Routes = [
       {
         path: 'blog',
         children: [
-          { path: 'article/:id', component: ArticleEditComponent },
+          { path: 'article/:id', component: ArticleCreateNewComponent },
           { path: 'create', component: ArticleCreateNewComponent },
           { path: 'articles', component: ArticlesComponent },
         ]
