@@ -18,9 +18,11 @@ export const initialState: InvestmentState = {
 export const reducer = createReducer(
   initialState,
   on(InvestmentActions.newInvestment, 
-    (state, { investment }) => ({ ...state, 
-      investmentAmount: investment.investmentAmount,
-      ProfitBeforeSellAllow: investment.ProfitBeforeSellAllow,
-      riskTakerProfit: investment.riskTakerProfit })),
+    (state, { investment }) => {
+      return { ...state, 
+        investmentAmount: investment.investmentAmount,
+        ProfitBeforeSellAllow: investment.ProfitBeforeSellAllow,
+        riskTakerProfit: investment.riskTakerProfit }
+    }),
 );
 
