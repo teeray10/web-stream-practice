@@ -3,19 +3,19 @@ import * as ThemeActions from "../actions/theme.actions";
 
 export const themeFeatureKey = "theme";
 
-export interface State {
-
+export interface ThemeState {
+  isDarkThemeEnabled: boolean
 }
 
-export const initialState: State = {
-
+export const initialState: ThemeState = {
+  isDarkThemeEnabled: false
 };
 
 
 export const reducer = createReducer(
   initialState,
 
-  on(ThemeActions.loadThemes, state => state),
+  on(ThemeActions.getTheme, state => state),
 
 );
 

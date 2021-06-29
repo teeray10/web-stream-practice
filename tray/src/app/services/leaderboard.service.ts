@@ -15,9 +15,5 @@ export class LeaderboardService {
 	getCurrentStandings(): Observable<Team[]> {
 	  console.log("Standings Service Call");
 	  return this.httpClient.get<Team[]>(this.url);
-			
-			
-	  // 	, { responseType: "application/json" })
-	    // .pipe(response => (response.body));
 	}
 }

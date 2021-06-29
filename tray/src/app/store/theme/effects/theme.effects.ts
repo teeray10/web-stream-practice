@@ -11,14 +11,14 @@ import * as ThemeActions from "../actions/theme.actions";
 export class ThemeEffects {
 
 
-  loadThemes$ = createEffect(() => {
-    return this.actions$.pipe( 
+  // loadThemes$ = createEffect(() => {
+  //   return this.actions$.pipe( 
 
-      ofType(ThemeActions.loadThemes),
-      /** An EMPTY observable only emits completion. Replace with your own observable API request */
-      concatMap(() => EMPTY as Observable<{ type: string }>)
-    );
-  });
+  //     ofType(ThemeActions.loadThemes),
+  //     /** An EMPTY observable only emits completion. Replace with your own observable API request */
+  //     concatMap(() => EMPTY as Observable<{ type: string }>)
+  //   );
+  // });
 
 
   constructor(private actions$: Actions) {}

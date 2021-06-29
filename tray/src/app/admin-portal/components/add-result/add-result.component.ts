@@ -26,7 +26,7 @@ export class AddResultComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.standingsStore.dispatch(getStandings());
+    this.standingsStore.dispatch(getStandings());
     this.standingsStore.pipe(select(selectorGetStandings))
       .subscribe(
         teams => {
