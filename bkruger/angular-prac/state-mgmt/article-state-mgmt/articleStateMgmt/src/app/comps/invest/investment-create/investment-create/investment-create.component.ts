@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Investment } from 'src/app/model/investment';
@@ -19,7 +20,8 @@ export class InvestmentCreateComponent implements OnInit {
   investment$?: Observable<Investment>
 
   constructor(
-    private store: Store<InvestmentState>
+    private store: Store<InvestmentState>,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -29,5 +31,6 @@ export class InvestmentCreateComponent implements OnInit {
   submitInvestment(){
     let a = new Investment(this.investmentAmount, this.profitBeforeSellAllow, this.riskTakerProfit);
     this.store.dispatch(newInvestment({investment: a}));
+    this.router.navigate(['/investments']);
   }
 }
