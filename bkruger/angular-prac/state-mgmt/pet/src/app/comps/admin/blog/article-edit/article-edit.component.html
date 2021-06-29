@@ -1,17 +1,19 @@
-<div>
-    <button (click)="do()">Do</button>
-</div>
-<p>{{ article$ | async | json }}</p>
+<form #newArticle="ngForm" (ngSubmit)="do(newArticle)">
+    <label>New Article Title:</label>
+    <input  type="text" id="title" 
+            name="title" [(ngModel)]="article.title"
+            #title="ngModel"/><br>
+    {{ article.title }} <br>
 
-<form #newArticleForm="ngForm" (ngSubmit)="onSubmit(newArticleForm)">
-    <input name="title" placeholder="title" type="text" [(ngModel)]="title"/><br>
-    {{ title }} <br>
-    <input name="content" placeholder="content" type="text" [(ngModel)]="content"/><br>
-    {{ content }} <br>
-    <input name="author" placeholder="author" type="text" [(ngModel)]="author"/><br>
-    {{ author }}
+    <label>New Article Author:</label>
+    <input  type="text" id="author" 
+            name="author" [(ngModel)]="article.author"
+            #author="ngModel"/><br>
+    {{ article.author }}
     <br><br>
-    <button type="submit">Submit</button>
+
+    <button type="submit" (click)="newArticle.reset()">Submit</button>
     
-    {{ form | json }}
+    <p>Article object:</p><p>{{ article$ | async | json }}</p><br>
+    <p>Form:</p><p>{{ newArticle.value | json }}</p>
 </form>
