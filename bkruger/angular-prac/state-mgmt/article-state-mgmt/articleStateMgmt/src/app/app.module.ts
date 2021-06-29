@@ -23,11 +23,6 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     
     StoreModule.forRoot({}, {}),
-    // EffectsModule.forRoot([]),
-    // StoreModule.forFeature(fromUser.userFeatureKey, fromUser.reducer),
-    // EffectsModule.forFeature([UserEffects, PostEffects]),
-    // StoreModule.forFeature(fromPost.postFeatureKey, fromPost.reducer)
-
     EffectsModule.forRoot([]),
     StoreModule.forFeature(fromInvestment.investmentFeatureKey, fromInvestment.reducer),
     EffectsModule.forFeature([InvestmentEffects]),
