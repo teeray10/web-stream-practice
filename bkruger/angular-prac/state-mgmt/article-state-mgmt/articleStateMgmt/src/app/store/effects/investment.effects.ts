@@ -4,21 +4,22 @@ import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { concatMap } from 'rxjs/operators';
 import { Observable, EMPTY } from 'rxjs';
 
-import * as DarkthemeActions from '../../actions/dark-theme/darktheme.actions';
+import * as InvestmentActions from '../actions/investment.actions';
 
 
 @Injectable()
-export class DarkthemeEffects {
+export class InvestmentEffects {
 
 
-  // loadDarkthemes$ = createEffect(() => {
+  // loadInvestments$ = createEffect(() => {
   //   return this.actions$.pipe( 
 
-  //     ofType(DarkthemeActions.toggleDarkTheme),
+  //     ofType(InvestmentActions.loadInvestments),
   //     /** An EMPTY observable only emits completion. Replace with your own observable API request */
   //     concatMap(() => EMPTY as Observable<{ type: string }>)
   //   );
   // });
+
 
   constructor(private actions$: Actions) {}
 

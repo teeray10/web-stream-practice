@@ -1,0 +1,17 @@
+<p>{{ investment$ | async | json }}</p><br><br><br>
+<form #investmentForm="ngForm" (ngSubmit)="submitInvestment()">
+    <label for="investmentAmount">Investment Amount:</label><br>
+    <input  type="text" [(ngModel)]="investmentAmount"
+            id="investmentAmount" name="investmentAmount"/><br><br>
+
+    <label for="profitBeforeSellAllow">Profit Before Allowed to Sell:</label><br>
+    <input  type="text" [(ngModel)]="profitBeforeSellAllow"
+            id="profitBeforeSellAllow" name="profitBeforeSellAllow"/><br><br>
+            
+    <label for="riskTakerProfit">Risk Taker's Profit</label><br>
+    <input type="text" [(ngModel)]="riskTakerProfit"
+           id="riskTakerProfit" 
+           name="riskTakerProfit" /><br><br>
+    <button type="submit">Submit</button>
+</form>
+
