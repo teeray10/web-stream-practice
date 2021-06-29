@@ -23,7 +23,7 @@ export class InvestmentCreateComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.investment$ = this.store.select(selectInvestmentState);
+    this.investment$ = this.store.pipe(select(selectInvestmentState));
   }
 
   submitInvestment(){
