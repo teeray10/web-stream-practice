@@ -7,5 +7,5 @@ export const selectInvestmentState = createFeatureSelector<fromInvestment.Invest
 
 export const selectInvestment = createSelector(
   selectInvestmentState,
-  (state) => state
+  state => ({state})
 );

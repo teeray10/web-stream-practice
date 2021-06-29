@@ -12,7 +12,10 @@ import { selectInvestmentState } from 'src/app/store/selectors/investment.select
   styleUrls: ['./investment-create.component.css']
 })
 export class InvestmentCreateComponent implements OnInit {
-  public investmentForm = new Investment(0, 0, 0)
+  // public investmentForm = new Investment(0, 0, 0)
+  public investmentAmount!: number;
+  public profitBeforeSellAllow!: number;
+  public riskTakerProfit!: number;
   investment$?: Observable<Investment>
 
   constructor(
@@ -20,10 +23,11 @@ export class InvestmentCreateComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.investment$ = this.store.pipe(select(selectInvestmentState));
+    this.investment$ = this.store.select(selectInvestmentState);
   }
 
   submitInvestment(){
-    this.store.dispatch(newInvestment({investment: this.investmentForm}));
+    let a = new Investment(this.investmentAmount, this.profitBeforeSellAllow, this.riskTakerProfit);
+    this.store.dispatch(newInvestment({investment: a}));
   }
 }
