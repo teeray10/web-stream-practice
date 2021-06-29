@@ -23,6 +23,7 @@ import { darkThemeFeatureKey, darkThemeReducer } from './store/reducers/dark-the
 import { NewArticleEffects } from './store/effects/new-article/new-article.effects';
 import { newArticleFeatureKey, newArticleReducer } from './store/reducers/new-article/new-article.reducer';
 import { FormsModule } from '@angular/forms';
+import { ArticleCreateNewComponent } from './comps/admin/blog/article-create-new/article-create-new/article-create-new.component';
 
 export function debug(reducer: ActionReducer<any>): ActionReducer<any> {
   return (state, action) => {
@@ -45,6 +46,7 @@ export function debug(reducer: ActionReducer<any>): ActionReducer<any> {
     RiskTakesComponent,
     RiskTakeComponent,
     ArticleEditComponent,
+    ArticleCreateNewComponent,
   ],
   imports: [
     BrowserModule,
