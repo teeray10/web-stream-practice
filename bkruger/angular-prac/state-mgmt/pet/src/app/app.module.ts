@@ -17,13 +17,12 @@ import { ActionReducer, StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { ApplicationHomeComponent } from './comps/app/application-home/application-home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ArticleEditComponent } from './comps/admin/blog/article-edit/article-edit.component';
 import { DarkthemeEffects } from './store/effects/dark-theme/darktheme.effects';
 import { darkThemeFeatureKey, darkThemeReducer } from './store/reducers/dark-theme/darktheme.reducer';
 import { NewArticleEffects } from './store/effects/new-article/new-article.effects';
 import { newArticleFeatureKey, newArticleReducer } from './store/reducers/new-article/new-article.reducer';
-import { MyTestComponent } from './comps/admin/blog/test/my-test/my-test.component';
 import { FormsModule } from '@angular/forms';
+import { ArticleCreateComponent } from './comps/admin/blog/article-create-new/article-create-new/article-create.component';
 
 export function debug(reducer: ActionReducer<any>): ActionReducer<any> {
   return (state, action) => {
@@ -45,8 +44,7 @@ export function debug(reducer: ActionReducer<any>): ActionReducer<any> {
     InvestmentComponent,
     RiskTakesComponent,
     RiskTakeComponent,
-    ArticleEditComponent,
-    MyTestComponent
+    ArticleCreateComponent,
   ],
   imports: [
     BrowserModule,

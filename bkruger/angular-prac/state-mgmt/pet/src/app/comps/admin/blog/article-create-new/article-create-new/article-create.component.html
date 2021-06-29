@@ -1,0 +1,25 @@
+<form #articleForm="ngForm" (ngSubmit)="submit()">
+    <div>
+        <label for="title">New Article Title: </label>
+        <input type="text" id="title" placeholder="new article title"
+                [(ngModel)]="article.title" name="title"/>
+    </div>
+    <div>
+        <label for="author">New Article Author: </label>
+        <input type="text" id="author" placeholder="new article author"
+                [(ngModel)]="article.author" name="author"/>
+    </div>
+    <div>
+        <label for="level">New Article Level: </label>
+        <input type="text" id="level" placeholder="new article level"
+                [(ngModel)]="article.level" name="level"/>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+
+<div>
+    <p>{{ article | json }}</p>
+    <p></p>
+</div>
