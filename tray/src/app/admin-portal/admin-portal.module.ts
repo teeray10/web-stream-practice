@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
 import { MatNativeDateModule } from "@angular/material/core";
+import { FormsModule } from "@angular/forms";
 
 
 import { AdminPortalComponent } from "./admin-portal.component";
@@ -43,6 +44,7 @@ import { TemplateAddResultFormComponent } from "./components/add-result/template
     MatInputModule,
     MatButtonModule,
     MatNativeDateModule,
+    FormsModule
   ],
 })
 export class AdminPortalModule {}

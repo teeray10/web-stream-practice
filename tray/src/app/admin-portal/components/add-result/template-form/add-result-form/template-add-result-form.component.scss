@@ -1,5 +1,18 @@
 * {
-  color: var(--text-color)
+  color: var(--text-color);
+}
+
+:host .mat-select {
+  color: white;
+}
+
+:host ::deep .mat-select-appearance-outline .mat-select-outline {
+  color: green;
+}
+
+.custom-alert {
+  padding: 0;
+  margin-top: -1em;
 }
 
 form {
@@ -79,8 +92,9 @@ form {
     align-items: center;
   }
   
-  .bottom button {
+  button {
     padding: 0.5em 2em;
+    color: var(--container-primary-color);
   }
   
   @media screen and (max-width: 576px) {
