@@ -2,7 +2,10 @@
     <div>
         <label for="title">New Article Title: </label>
         <input type="text" id="title" placeholder="new article title"
-                [(ngModel)]="article.title" name="title"/>
+                [(ngModel)]="article.title" name="title"
+                appForbiddenTitle="Fiat" #titleInput="ngModel"
+                required/>
+        {{ titleInput.valid }}
     </div>
     <div>
         <label for="author">New Article Author: </label>

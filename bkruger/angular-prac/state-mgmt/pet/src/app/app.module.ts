@@ -23,6 +23,7 @@ import { NewArticleEffects } from './store/effects/new-article/new-article.effec
 import { newArticleFeatureKey, newArticleReducer } from './store/reducers/new-article/new-article.reducer';
 import { FormsModule } from '@angular/forms';
 import { ArticleCreateComponent } from './comps/admin/blog/article-create-new/article-create-new/article-create.component';
+import { ForbiddenValidatorDirective } from './directives/form-validation/forbidden-validator.directive';
 
 export function debug(reducer: ActionReducer<any>): ActionReducer<any> {
   return (state, action) => {
@@ -45,6 +46,7 @@ export function debug(reducer: ActionReducer<any>): ActionReducer<any> {
     RiskTakesComponent,
     RiskTakeComponent,
     ArticleCreateComponent,
+    ForbiddenValidatorDirective,
   ],
   imports: [
     BrowserModule,
