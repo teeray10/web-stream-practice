@@ -1,8 +1,15 @@
 <form #articleForm="ngForm" (ngSubmit)="submit()">
     <div>
-        <label for="title">New Article Title: </label>
+        <!-- <label for="title">New Article Title: </label>
         <input type="text" id="title" placeholder="new article title"
-                [(ngModel)]="article.title" name="title"/>
+                [(ngModel)]="article.title" name="title"/> -->
+        <mat-form-field appearance="fill">
+            <mat-label for="title">New Article Title:</mat-label>
+            <input type="text" id="title"
+                    name="title" [(ngModel)]="article.title"
+                    required
+                    matInput/>
+        </mat-form-field>
     </div>
     <div>
         <label for="author">New Article Author: </label>
