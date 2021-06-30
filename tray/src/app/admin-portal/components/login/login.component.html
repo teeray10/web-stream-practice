@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="header"></div>
+    <div class="main">
+        <form #loginForm="ngForm" (ngSubmit)="submit()">
+            <mat-form-field>
+                <mat-label for="username">Username</mat-label>
+                <input matInput type="text" name="username" required />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="password">Password</mat-label>
+                <input matInput type="password" name="password" required />
+            </mat-form-field>
+            <button mat-raised-button type="submit" [disabled]="loginForm.invalid">Login</button>
+        </form>
+    </div>
+    <div class="footer"></div>
+</div>
