@@ -1,10 +1,14 @@
 <form #articleForm="ngForm" (ngSubmit)="submit()">
     <div>
-        <label for="title">New Article Title: </label>
-        <input type="text" id="title" placeholder="new article title"
-                [(ngModel)]="article.title" name="title"
-                appForbiddenTitle="Fiat" #titleInput="ngModel"
-                required/>
+        <!-- <label for="title">New Article Title: </label>
+        <input type="text" id="title" placeholder="new article title" -->
+        <mat-form-field appearance="fill">
+            <mat-label for="title">New Article Title:</mat-label>
+            <input type="text" id="title"
+                    name="title" [(ngModel)]="article.title"
+                    required appForbiddenTitle="Fiat" #titleInput="ngModel"
+                    matInput/>
+        </mat-form-field>
         {{ titleInput.valid }}
     </div>
     <div>

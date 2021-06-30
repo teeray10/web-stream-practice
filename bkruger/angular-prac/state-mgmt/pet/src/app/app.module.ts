@@ -24,6 +24,8 @@ import { newArticleFeatureKey, newArticleReducer } from './store/reducers/new-ar
 import { FormsModule } from '@angular/forms';
 import { ArticleCreateComponent } from './comps/admin/blog/article-create-new/article-create-new/article-create.component';
 import { ForbiddenValidatorDirective } from './directives/form-validation/forbidden-validator.directive';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 export function debug(reducer: ActionReducer<any>): ActionReducer<any> {
   return (state, action) => {
@@ -59,7 +61,9 @@ export function debug(reducer: ActionReducer<any>): ActionReducer<any> {
     EffectsModule.forFeature([DarkthemeEffects, NewArticleEffects]),
     BrowserAnimationsModule,
     StoreModule.forFeature(newArticleFeatureKey, newArticleReducer),
-    FormsModule
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
