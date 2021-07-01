@@ -30,7 +30,47 @@
     </div>
 </form>
 
+<form [formGroup]="articleRForm" (ngSubmit)="submitReactive()">
+    <div>
+        <label for="title">New Article Title:</label>
+        <input type="text" id="title" placeholder="new article title"
+                formControlName="title"/>
+        {{ articleRForm.valid }}
+        {{ articleRForm.controls.title.valid }}
+    </div>
+    <div>
+        <label for="author">New Article Author:</label>
+        <input type="text" id="author"
+            formControlName="author"
+            placeholder="new article author"/>
+    </div>
+    <button (click)="addTldr()">Add TL;DR Segment</button>
+    <div formArrayName="tldr">
+        <div *ngFor="let aTldr of tldr.controls; let i=index ">
+            <label for="atTdr{{ i }}">Segment {{ i + 1 }}</label>
+            <input type="text"
+                    formControlName="{{i}}"/>
+        </div>    
+    </div>
+    <button (click)="addContent()">Add Content Segment</button>
+    <div formArrayName="content">
+        <div *ngFor="let aContent of content.controls; let i=index ">
+            <label for="aContent-{{ i }}">Content Segment {{ i + 1 }}</label>
+            <input type="text"
+                    formControlName="{{i}}"/>
+        </div>    
+    </div>
+    <div>
+        <label for="level">New Article Level:</label>
+        <input type="text" id="level"
+            formControlName="level"
+            placeholder="new article level"/>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
 <div>
     <p>{{ article | json }}</p>
     <p></p>
 </div>
+
