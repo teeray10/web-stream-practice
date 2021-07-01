@@ -1,76 +1,64 @@
-<form #articleForm="ngForm" (ngSubmit)="submit()">
-    <div>
-        <!-- <label for="title">New Article Title: </label>
-        <input type="text" id="title" placeholder="new article title" -->
-        <mat-form-field appearance="fill">
-            <mat-label for="title">New Article Title:</mat-label>
-            <input type="text" id="title"
-                    name="title" [(ngModel)]="article.title"
-                    required appForbiddenTitle="Fiat" #titleInput="ngModel"
-                    matInput/>
-        </mat-form-field>
-        {{ titleInput.valid }}
-    </div>
-    <div>
-        <label for="author">New Article Author: </label>
-        <input type="text" id="author" placeholder="new article author"
-                [(ngModel)]="article.author" name="author"/>
-    </div>
-    <div>
-        <label for="level">New Article Level: </label>
-        <!-- <input type="text" id="level" placeholder="new article level"
-                [(ngModel)]="article.level" name="level"/> -->
-        <input type="text" id="level" placeholder="new article level"
-                [formControl]="level"/>
-        {{ level.value }}
-        {{ level.valueChanges | async }}
-    </div>
-    <div>
-        <button type="submit">Submit</button>
-    </div>
-</form>
-
 <form [formGroup]="articleRForm" (ngSubmit)="submitReactive()">
     <div>
-        <label for="title">New Article Title:</label>
+        <!-- <label for="title">New Article Title:</label>
         <input type="text" id="title" placeholder="new article title"
                 formControlName="title"/>
         {{ articleRForm.valid }}
-        {{ articleRForm.controls.title.valid }}
+        {{ articleRForm.controls.title.valid }} -->
+        <mat-form-field appearance="fill">
+            <mat-label for="title">New article title</mat-label>
+            <input type="text" id="title"
+                    required
+                    formControlName="title"
+                    matInput/>
+        </mat-form-field>
     </div>
     <div>
-        <label for="author">New Article Author:</label>
-        <input type="text" id="author"
-            formControlName="author"
-            placeholder="new article author"/>
+        <mat-form-field appearance="fill">
+            <mat-label for="author">New article author</mat-label>
+            <input type="text" id="author"
+                    required
+                    formControlName="author"
+                    matInput/>
+        </mat-form-field>
     </div>
-    <button (click)="addTldr()">Add TL;DR Segment</button>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label for="level">New article level</mat-label>
+            <input type="text" id="level"
+                    required
+                    formControlName="level"
+                    matInput/>
+        </mat-form-field>
+    </div>
+    <button (click)="addTldr()" type="button" mat-raised-button color="">Add TL;DR Segment</button>
     <div formArrayName="tldr">
         <div *ngFor="let aTldr of tldr.controls; let i=index ">
-            <label for="atTdr{{ i }}">Segment {{ i + 1 }}</label>
-            <input type="text"
-                    formControlName="{{i}}"/>
+            <!-- <label for="aTldr{{ i }}">Segment {{ i + 1 }}</label>
+            <input type="text" id="aTldr{{i}}"
+                    formControlName="{{i}}"/> -->
+            <mat-form-field appearance="fill">
+                <mat-label for="tldr">Segment {{ i + 1 }}</mat-label>
+                <textarea type="text" id="tldr"
+                        required
+                        formControlName="{{i}}"
+                        matInput></textarea>
+            </mat-form-field>
         </div>    
     </div>
-    <button (click)="addContent()">Add Content Segment</button>
+    <button (click)="addContent()" type="button" mat-raised-button color="">Add Content Segment</button>
     <div formArrayName="content">
         <div *ngFor="let aContent of content.controls; let i=index ">
-            <label for="aContent-{{ i }}">Content Segment {{ i + 1 }}</label>
-            <input type="text"
-                    formControlName="{{i}}"/>
+            <mat-form-field appearance="fill">
+                <mat-label for="content">Segment {{ i + 1 }}</mat-label>
+                <textarea type="text" id="content"
+                        required
+                        formControlName="{{i}}"
+                        matInput></textarea>
+            </mat-form-field>
         </div>    
     </div>
-    <div>
-        <label for="level">New Article Level:</label>
-        <input type="text" id="level"
-            formControlName="level"
-            placeholder="new article level"/>
-    </div>
-    <button type="submit">Submit</button>
+    <!-- <button type="submit">Submit</button> -->
+    <button type="submit" mat-raised-button color="primary">Submit</button>
 </form>
-
-<div>
-    <p>{{ article | json }}</p>
-    <p></p>
-</div>
 

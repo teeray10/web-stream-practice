@@ -27,6 +27,7 @@ import { ForbiddenValidatorDirective } from './directives/form-validation/forbid
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 
 export function debug(reducer: ActionReducer<any>): ActionReducer<any> {
   return (state, action) => {
@@ -66,6 +67,7 @@ export function debug(reducer: ActionReducer<any>): ActionReducer<any> {
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
