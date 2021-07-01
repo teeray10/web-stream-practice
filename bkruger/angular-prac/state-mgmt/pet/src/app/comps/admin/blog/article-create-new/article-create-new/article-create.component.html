@@ -18,8 +18,12 @@
     </div>
     <div>
         <label for="level">New Article Level: </label>
+        <!-- <input type="text" id="level" placeholder="new article level"
+                [(ngModel)]="article.level" name="level"/> -->
         <input type="text" id="level" placeholder="new article level"
-                [(ngModel)]="article.level" name="level"/>
+                [formControl]="level"/>
+        {{ level.value }}
+        {{ level.valueChanges | async }}
     </div>
     <div>
         <button type="submit">Submit</button>

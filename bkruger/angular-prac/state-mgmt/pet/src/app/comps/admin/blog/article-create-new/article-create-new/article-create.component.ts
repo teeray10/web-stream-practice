@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Article } from 'src/app/model/article/article';
 
 @Component({
@@ -10,6 +11,7 @@ export class ArticleCreateComponent implements OnInit {
   article: Article = { id: 0, title:'', date: new Date, 
             author: '', tldr: [''], content: [''], 
             level:'', likes:0, dislikes:0, visits:0 };
+  level = new FormControl('');
 
   constructor() { }
 

@@ -26,6 +26,7 @@ import { ArticleCreateComponent } from './comps/admin/blog/article-create-new/ar
 import { ForbiddenValidatorDirective } from './directives/form-validation/forbidden-validator.directive';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
 
 export function debug(reducer: ActionReducer<any>): ActionReducer<any> {
   return (state, action) => {
@@ -62,6 +63,7 @@ export function debug(reducer: ActionReducer<any>): ActionReducer<any> {
     BrowserAnimationsModule,
     StoreModule.forFeature(newArticleFeatureKey, newArticleReducer),
     FormsModule,
+    ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
   ],
