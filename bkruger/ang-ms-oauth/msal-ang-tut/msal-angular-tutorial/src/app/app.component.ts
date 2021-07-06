@@ -34,13 +34,15 @@ export class AppComponent implements OnInit{
       })
   }
 
-  login(): void{
+  login(): void {
+    console.log("login()");
     if (this.msalGuardConfig.authRequest){
+      console.log("this.msalGuardConfig.authRequest");
       this.authService.loginRedirect({ ...this.msalGuardConfig.authRequest } as RedirectRequest)
     } else {
+      console.log("else");
       this.authService.loginRedirect();
     }
-    // this.authService.loginRedirect();
   }
 
   logout(): void {

@@ -20,7 +20,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
-    initialNavigation: !isIframe ? 'enabled' : 'disabled'
+    initialNavigation: isIframe ? 'disabled' : 'enabled'
   })],
   exports: [RouterModule]
 })
