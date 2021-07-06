@@ -20,7 +20,6 @@ export class HomeComponent implements OnInit {
     this.msalBroadcastService.msalSubject$
       .pipe(
         filter((msg: EventMessage) => msg.eventType === EventType.LOGIN_SUCCESS)
-        // filter(() => 1 === 1 )  
       )
       .subscribe((res: EventMessage) => {
         console.log(res);
