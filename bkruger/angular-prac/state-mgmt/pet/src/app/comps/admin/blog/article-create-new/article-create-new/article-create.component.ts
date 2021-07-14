@@ -59,7 +59,8 @@ export class ArticleCreateComponent implements OnInit {
   }
 
   submitReactive(): void{
-
+    console.log(this.articleRForm.value);
+    this.article.date = new Date();
   }
 
 }

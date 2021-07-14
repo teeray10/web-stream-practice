@@ -62,3 +62,26 @@
     <button type="submit" mat-raised-button color="primary">Submit</button>
 </form>
 
+<div class="container">
+    <div class="title">
+        {{ articleRForm.value.title }}
+    </div>
+    <div class="metaData">
+        {{ articleRForm.value.author }} {{ articleRForm.value.level }} {{ article.date | date:'MMMM d, y' | uppercase }}
+    </div>
+    <div class="tldr">
+        <ul>
+            <li *ngFor="let aTldr of articleRForm.value.tldr">
+                {{ aTldr }}
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <ul>
+            <li *ngFor="let aContent of articleRForm.value.content">
+                {{ aContent }}
+            </li>
+        </ul>
+    </div>
+</div>
+
