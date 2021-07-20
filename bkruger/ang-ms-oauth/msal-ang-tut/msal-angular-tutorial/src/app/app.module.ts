@@ -41,7 +41,7 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
     }), {
       interactionType: InteractionType.Redirect,
       authRequest: {
-        scopes: ['user.read']
+        scopes: ['user.read', 'calendars.read']
       }
     }, null)
   ],
